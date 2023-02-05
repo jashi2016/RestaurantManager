@@ -11,4 +11,7 @@ public interface restaurantInt {
 
     List<restaurant> getRestaurantByName(String name);
 
+    String deleteRestaurant(String name);
+
+    String updateRestaurantDetails(String name,String location, restaurant res);
 }

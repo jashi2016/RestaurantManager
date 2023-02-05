@@ -33,4 +33,13 @@ public class RestaurantController {
     public List<restaurant> getRestaurantByName2(@PathVariable String name){
         return restaurantint.getRestaurantByName(name);
     }
+    @PutMapping("/update/{name}/{location}")
+    public String updateRestaurantDetails(@PathVariable("name") String name,@PathVariable("location") String location,@RequestBody restaurant res){
+        return restaurantint.updateRestaurantDetails(name,location,res);
+    }
+
+    @DeleteMapping("/delete/{name}")
+    public String deleteRestaurant(@PathVariable String name){
+        return restaurantint.deleteRestaurant(name);
+    }
 }
